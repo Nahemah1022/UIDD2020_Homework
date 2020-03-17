@@ -5,14 +5,15 @@ $(function () {
         axis: "x",
         containment: ".roll_bar",
         drag: function (e) {
-            $("#train").css("left", "-=" + ((e.offsetX - startX) * 10));
-            $("#airplane").css("left", "-=" + ((e.offsetX - startX) * 10));
-            $(".mid").css("left", "-=" + ((e.offsetX - startX) * 10));
+            $("#train").css("left", "-=" + ((e.offsetX - startX) * 5));
+            $("#airplane").css("left", "-=" + ((e.offsetX - startX) * 5));
+            $(".mid").css("left", "-=" + ((e.offsetX - startX) * 5));
         },
         start: function (e) {
             startX = e.offsetX;
         },
         stop: function (e) {
+            console.log($(this).position().left - $(".roll_bar").position().left);
             if ($(this).position().left - $(".roll_bar").position().left <= 5) {
                 alert("left");
             }
@@ -24,7 +25,7 @@ $(function () {
                     left: "0"
                 }, 500);
                 $("#train").animate({
-                    left: "-350px"
+                    left: "-1250px"
                 }, 500);
                 $("#airplane").animate({
                     left: left_airplane

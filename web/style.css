@@ -69,12 +69,12 @@ html, body {
 
 #train{
     position: absolute;
-    left: -350px;
+    left: -1250px;
 }
 
 #airplane{
     position: absolute;
-    right: -350px;
+    right: -1250px;
 }
 
 .footer{
