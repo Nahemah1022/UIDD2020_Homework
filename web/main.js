@@ -11,6 +11,7 @@ $(function () {
         },
         start: function (e) {
             startX = e.offsetX;
+            left_airplane = $("#airplane").css("left");
         },
         stop: function (e) {
             console.log($(this).position().left - $(".roll_bar").position().left);
