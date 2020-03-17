@@ -56,10 +56,14 @@ html, body {
 
 .main{
     position: relative;
+    height: 60%;
     overflow: hidden;
 }
 
 .mid{
+    position: absolute;
+    left: 0;
+    width: 100%;
     display: inline-block;
 }
 
