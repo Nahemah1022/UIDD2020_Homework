@@ -1,30 +1,32 @@
 $(function () {
-    var startX;
+    var originLeft = $("#btn").css("left");
+    console.log(originLeft);
     var left_airplane = $("#airplane").css("left");
     $("#btn").draggable({
         axis: "x",
         containment: ".roll_bar",
         drag: function (e) {
+            /*
             $("#train").css("left", "-=" + ((e.offsetX - startX) * 5));
             $("#airplane").css("left", "-=" + ((e.offsetX - startX) * 5));
             $(".mid").css("left", "-=" + ((e.offsetX - startX) * 5));
+            */
         },
         start: function (e) {
-            startX = e.offsetX;
             left_airplane = $("#airplane").css("left");
         },
         stop: function (e) {
-            console.log($(this).position().left - $(".roll_bar").position().left);
             if ($(this).position().left - $(".roll_bar").position().left <= 5) {
-                alert("left");
+                //alert("left");
             }
             else if (($(".roll_bar").position().left + $(".roll_bar").width()) - ($(this).position().left + $(this).width()) <= 10) {
-                alert("right");
+                //alert("right");
             }
             else {
                 $(this).animate({
-                    left: "0"
+                    left: originLeft
                 }, 500);
+                /*
                 $("#train").animate({
                     left: "-1250px"
                 }, 500);
@@ -35,6 +37,7 @@ $(function () {
                     left: "0",
                     width: "100%"
                 }, 500);
+                */
             }
         }
     });
