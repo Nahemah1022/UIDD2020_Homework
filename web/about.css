@@ -55,12 +55,22 @@ html, body {
   }
 
 .main{
-    position: relative;
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    height: 70%;
+}
+
+.main div:not(.airticle){
+    display: flex;
+    align-items: flex-start;
+    width: 45%;
     height: 80%;
-    overflow: hidden;
-    z-index: 0;
+}
+
+.main div img{
+    width: 100%;
+    margin-left: 100px;
 }
 
 .mid{
@@ -103,16 +113,44 @@ html, body {
     width: 33%;
 }
 
-.roll_bar{
+.airticle{
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    margin: 5px;
-    background: url(./src/below-bar-01.png) center/contain;
-    background-repeat: no-repeat;
+    flex-direction: column;
+    height: 80%;
+    width: 40%;
+    text-align: start;
+    color: #747474;
 }
 
-#btn{
-    padding: 0;
-    margin: 5px;
+h2{
+    font-size: 40px;
+}
+
+p{
+    font-size: 20px;
+    width: 60%;
+}
+
+#space{
+    width: 10%;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+}
+
+.btns:hover{
+    cursor: pointer;
+}
+
+.dots{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.dots_con{
+    display: flex;
+    justify-content: space-around;
 }
